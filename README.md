@@ -21,7 +21,7 @@ El simulador evalúa estas políticas bajo diferentes patrones de acceso a memor
 ### 1. Clonar o descargar el proyecto
 
 ```bash
-git clone https://github.com/tuusuario/proyecto_cache.git
+git clone https://github.com/Sheilarios/ARQ-CACHE.git
 cd proyecto_cache
 ```
 ### 2. Intalar dependencias
