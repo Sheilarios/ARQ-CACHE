@@ -1,45 +1,79 @@
 ================================================================================
-RESULTADOS PARA EL ARTICULO
+RESULTADOS PARA EL ARTÍCULO
 ================================================================================
 
-3.1 Configuracion experimental
+3.1 Configuración experimental
 ----------------------------------------
-Parametros de simulacion:
-- Tamanio de cache: 4 bloques
+Parámetros de simulación:
+- Tamaño de caché: 4 bloques
 - Total de accesos: 1000
 - Iteraciones: 10
 - Rango de direcciones: 1 - 20
-- Politicas evaluadas: LRU, FIFO, Random
+- Políticas evaluadas: LRU, FIFO, Random
 
-Resultados para patron secuencial
+3.2 Resultados para patrón secuencial
 ----------------------------------------
   LRU: Hit Rate = 0.00%, Reemplazos = 996
   FIFO: Hit Rate = 0.00%, Reemplazos = 996
   Random: Hit Rate = 0.00%, Reemplazos = 996
 
-Resultados para patron aleatorio
+3.3 Resultados para patrón aleatorio
 ----------------------------------------
   LRU: Hit Rate = 19.12%, Reemplazos = 805
   FIFO: Hit Rate = 19.04%, Reemplazos = 806
   Random: Hit Rate = 19.16%, Reemplazos = 804
 
-Resultados para patron localidad
+3.4 Resultados para patrón con localidad temporal
 ----------------------------------------
   LRU: Hit Rate = 99.70%, Reemplazos = 0
   FIFO: Hit Rate = 99.70%, Reemplazos = 0
   Random: Hit Rate = 99.70%, Reemplazos = 0
 
-Resultados para patron mixto
+3.5 Resultados agregados y comparativos
 ----------------------------------------
-  LRU: Hit Rate = 63.27%, Reemplazos = 363
-  FIFO: Hit Rate = 56.87%, Reemplazos = 427
-  Random: Hit Rate = 57.23%, Reemplazos = 424
 
-MEJOR POLITICA POR PATRON
-----------------------------------------
-  secuencial: LRU (0.00%)
-  aleatorio: Random (19.16%)
-  localidad: LRU (99.70%)
-  mixto: LRU (63.27%)
+SECUENCIAL:
+  Mejor política: LRU (0.00%)
+  Peor política: LRU (0.00%)
+
+SECUENCIAL_CIRCULAR:
+  Mejor política: Random (0.45%)
+  Peor política: LRU (0.00%)
+
+ALEATORIO:
+  Mejor política: Random (19.16%)
+  Peor política: FIFO (19.04%)
+
+LOCALIDAD:
+  Mejor política: LRU (99.70%)
+  Peor política: LRU (99.70%)
+
+LOCALIDAD_PESADA:
+  Mejor política: LRU (79.49%)
+  Peor política: FIFO (75.03%)
+
+MIXTO:
+  Mejor política: LRU (63.27%)
+  Peor política: FIFO (56.87%)
+
+MIXTO_ORDENADO:
+  Mejor política: LRU (75.36%)
+  Peor política: Random (75.17%)
+
+ESTACIONAL:
+  Mejor política: LRU (93.00%)
+  Peor política: Random (87.93%)
+
+REPETICIONES:
+  Mejor política: Random (16.29%)
+  Peor política: FIFO (15.14%)
+
+UNIFORME:
+  Mejor política: LRU (20.27%)
+  Peor política: Random (20.02%)
+
+EXPONENCIAL:
+  Mejor política: LRU (88.58%)
+  Peor política: Random (83.95%)
 
 ================================================================================
