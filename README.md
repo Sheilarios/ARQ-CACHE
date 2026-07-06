@@ -22,10 +22,11 @@ El simulador evalúa estas políticas bajo diferentes patrones de acceso a memor
 
 ```bash
 git clone https://github.com/Sheilarios/ARQ-CACHE.git
-cd proyecto_cache
+cd ARQ-CACHE
 ```
 ### 2. Intalar dependencias
  pip install -r requirements.txt
 
  ### Ejecucion
- python main.py
+ python analisis_extendido.py
+ 
