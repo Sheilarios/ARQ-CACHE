@@ -1,8 +1,3 @@
-"""
-Módulo: main.py
-Script principal para ejecutar la simulación de políticas de reemplazo de caché
-"""
-
 import os
 import sys
 import pandas as pd
@@ -14,16 +9,15 @@ from src.patterns import PATRONES_PRINCIPALES
 
 
 def crear_directorios():
-    """Crea los directorios necesarios para guardar resultados"""
+
     directorios = ['results', 'results/graficos', 'results/tablas']
     for d in directorios:
         os.makedirs(d, exist_ok=True)
     print("Directorios creados: results, results/graficos, results/tablas")
 
 
-def generar_grafico_barras(df_promedio, output_dir='results/graficos'):
-    """Genera gráfico de barras comparativo de hit rates"""
-    
+def generar_grafico_barras(df_promedio, output_dir='results/graficos'): 
+
     politicas = df_promedio['politica'].unique()
     patrones = df_promedio['patron'].unique()
     
@@ -60,13 +54,12 @@ def generar_grafico_barras(df_promedio, output_dir='results/graficos'):
     plt.tight_layout()
     plt.savefig(f'{output_dir}/comparacion_hit_rate.png', dpi=150, bbox_inches='tight')
     plt.savefig(f'{output_dir}/comparacion_hit_rate.pdf', bbox_inches='tight')
-    print(f"📊 Gráfico guardado: {output_dir}/comparacion_hit_rate.png")
+    print(f" Gráfico guardado: {output_dir}/comparacion_hit_rate.png")
     plt.close()
 
 
 def generar_grafico_reemplazos(df_promedio, output_dir='results/graficos'):
-    """Genera gráfico de barras comparativo de reemplazos"""
-    
+
     politicas = df_promedio['politica'].unique()
     patrones = df_promedio['patron'].unique()
     
@@ -101,9 +94,8 @@ def generar_grafico_reemplazos(df_promedio, output_dir='results/graficos'):
     plt.close()
 
 
-def generar_grafico_lineas(df_promedio, output_dir='results/graficos'):
-    """Genera gráfico de líneas para ver tendencias por patrón"""
-    
+def generar_grafico_lineas(df_promedio, output_dir='results/graficos'):   
+
     politicas = df_promedio['politica'].unique()
     patrones = df_promedio['patron'].unique()
     
@@ -139,8 +131,7 @@ def generar_grafico_lineas(df_promedio, output_dir='results/graficos'):
 
 
 def generar_tabla_resumen_latex(df_promedio, output_dir='results/tablas'):
-    """Genera tabla de resultados en formato LaTeX para el artículo"""
-    
+
     tabla = df_promedio[['politica', 'patron', 'hit_rate', 'miss_rate', 'replacements']].copy()
     tabla.columns = ['Política', 'Patrón', 'Hit Rate (\\%)', 'Miss Rate (\\%)', 'Reemplazos']
     tabla = tabla.round({'Hit Rate (\\%)': 2, 'Miss Rate (\\%)': 2, 'Reemplazos': 2})
@@ -159,8 +150,7 @@ def generar_tabla_resumen_latex(df_promedio, output_dir='results/tablas'):
 
 
 def generar_archivo_para_articulo(df_promedio, output_dir='results'):
-    """Genera un archivo con los resultados listos para copiar al artículo"""
-    
+
     with open(f'{output_dir}/resultados_para_articulo.txt', 'w', encoding='utf-8') as f:
         f.write("=" * 80 + "\n")
         f.write("RESULTADOS PARA EL ARTÍCULO\n")
@@ -212,12 +202,11 @@ def generar_archivo_para_articulo(df_promedio, output_dir='results'):
         
         f.write("\n" + "=" * 80 + "\n")
     
-    print(f"📄 Archivo para artículo guardado: {output_dir}/resultados_para_articulo.txt")
+    print(f" Archivo para artículo guardado: {output_dir}/resultados_para_articulo.txt")
 
 
 def generar_grafico_comparativo_politicas(df_promedio, output_dir='results/graficos'):
-    """Genera gráfico tipo radar para comparar políticas en múltiples patrones"""
-    
+
     patrones = df_promedio['patron'].unique()
     politicas = df_promedio['politica'].unique()
     
@@ -255,7 +244,6 @@ def generar_grafico_comparativo_politicas(df_promedio, output_dir='results/grafi
 
 
 def main():
-    """Función principal que ejecuta toda la simulación"""
     
     print("=" * 70)
     print("SIMULADOR DE POLÍTICAS DE REEMPLAZO DE CACHÉ")

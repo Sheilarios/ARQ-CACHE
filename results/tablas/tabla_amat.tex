@@ -1,14 +1,27 @@
 \begin{table}
-\caption{AMAT estimado por política y escenario (ns)}
+\caption{AMAT estimado por política, patrón y capacidad de caché (ns)}
 \label{tab:amat}
-\begin{tabular}{lrrrr}
+\begin{tabular}{llrrr}
 \toprule
-patron & secuencial & aleatorio & localidad & mixto \\
-politica &  &  &  &  \\
+ & capacidad & 4 & 8 & 16 \\
+patron & politica &  &  &  \\
 \midrule
-FIFO & 21.000000 & 17.190000 & 1.060000 & 9.630000 \\
-LRU & 21.000000 & 17.180000 & 1.060000 & 8.350000 \\
-Random & 21.000000 & 17.170000 & 1.060000 & 9.550000 \\
+\multirow[t]{3}{*}{aleatorio} & FIFO & 17.192000 & 13.254000 & 5.416000 \\
+ & LRU & 17.176000 & 13.298000 & 5.320000 \\
+ & Random & 17.168000 & 13.204000 & 5.292000 \\
+\cline{1-5}
+\multirow[t]{3}{*}{localidad} & FIFO & 1.060000 & 1.060000 & 1.060000 \\
+ & LRU & 1.060000 & 1.060000 & 1.060000 \\
+ & Random & 1.060000 & 1.060000 & 1.060000 \\
+\cline{1-5}
+\multirow[t]{3}{*}{mixto} & FIFO & 9.626000 & 6.096000 & 2.678000 \\
+ & LRU & 8.346000 & 4.772000 & 2.474000 \\
+ & Random & 9.554000 & 6.208000 & 2.568000 \\
+\cline{1-5}
+\multirow[t]{3}{*}{secuencial} & FIFO & 21.000000 & 21.000000 & 21.000000 \\
+ & LRU & 21.000000 & 21.000000 & 21.000000 \\
+ & Random & 21.000000 & 21.000000 & 21.000000 \\
+\cline{1-5}
 \bottomrule
 \end{tabular}
 \end{table}
