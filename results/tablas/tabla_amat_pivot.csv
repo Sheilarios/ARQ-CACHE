@@ -1,0 +1,4 @@
+politica,secuencial,aleatorio,localidad,mixto
+FIFO,21.0,17.192,1.06,9.626
+LRU,21.0,17.176,1.06,8.346
+Random,21.0,17.168,1.06,9.554

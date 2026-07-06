@@ -1,0 +1,13 @@
+patron,politica,hit_rate,miss_rate,replacements
+secuencial,LRU,0.0,100.0,996.0
+secuencial,FIFO,0.0,100.0,996.0
+secuencial,Random,0.0,100.0,996.0
+aleatorio,LRU,19.12,80.88,804.8
+aleatorio,FIFO,19.04,80.96,805.6
+aleatorio,Random,19.26,80.74,803.4
+localidad,LRU,99.7,0.3,0.0
+localidad,FIFO,99.7,0.3,0.0
+localidad,Random,99.7,0.3,0.0
+mixto,LRU,63.27,36.73,363.3
+mixto,FIFO,56.87,43.13,427.3
+mixto,Random,57.26,42.74,423.4

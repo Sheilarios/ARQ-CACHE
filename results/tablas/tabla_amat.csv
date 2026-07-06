@@ -1,0 +1,13 @@
+politica,patron,hit_rate,miss_rate,amat_ns
+FIFO,aleatorio,19.04,80.96,17.192
+LRU,aleatorio,19.12,80.88,17.176
+Random,aleatorio,19.16,80.84,17.168
+FIFO,localidad,99.7,0.3,1.06
+LRU,localidad,99.7,0.3,1.06
+Random,localidad,99.7,0.3,1.06
+FIFO,mixto,56.87,43.13,9.626
+LRU,mixto,63.27,36.73,8.346
+Random,mixto,57.23,42.77,9.554
+FIFO,secuencial,0.0,100.0,21.0
+LRU,secuencial,0.0,100.0,21.0
+Random,secuencial,0.0,100.0,21.0

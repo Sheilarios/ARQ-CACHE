@@ -1,0 +1,13 @@
+patron,politica,4,8,16
+aleatorio,FIFO,80.96,61.27,22.08
+aleatorio,LRU,80.88,61.49,21.6
+aleatorio,Random,80.84,61.02,21.46
+localidad,FIFO,0.3,0.3,0.3
+localidad,LRU,0.3,0.3,0.3
+localidad,Random,0.3,0.3,0.3
+mixto,FIFO,43.13,25.48,8.39
+mixto,LRU,36.73,18.86,7.37
+mixto,Random,42.77,26.04,7.84
+secuencial,FIFO,100.0,100.0,100.0
+secuencial,LRU,100.0,100.0,100.0
+secuencial,Random,100.0,100.0,100.0
